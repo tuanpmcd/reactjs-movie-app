@@ -11,10 +11,10 @@ export const unavailable =
 export const noPicture =
   "https://upload.wikimedia.org/wikipedia/en/6/60/No_Picture.jpg";
 
-export const API_URL =
-  "https://api.themoviedb.org/3/discover/movie";
+// export const API_URL =
+//   "https://api.themoviedb.org/3/discover/movie";
 
-export const API_URL_DETAIL =
-  "https://api.themoviedb.org/3/movie";
+// export const API_URL_DETAIL =
+//   "https://api.themoviedb.org/3/movie";
 
 

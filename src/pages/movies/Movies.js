@@ -14,7 +14,7 @@ const Movies = () => {
 
   const fetchMovies = async (pageNumber) => {
     const { data } = await axios.get(
-      `${API_URL}?api_key=${process.env.REACT_APP_API_KEY}&primary_release_date.lte=2020-12-31&sort_by=${sortOrder}&page=${pageNumber}`
+      `${process.env.REACT_APP_API_URL}?api_key=${process.env.REACT_APP_API_KEY}&primary_release_date.lte=2020-12-31&sort_by=${sortOrder}&page=${pageNumber}`
     );
 
     if (pageNumber === 1) {

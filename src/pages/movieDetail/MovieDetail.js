@@ -13,7 +13,7 @@ const MovieDetail = () => {
   useEffect(() => {
     const fetchMovieDetail = async () => {
       const { data } = await axios.get(
-        `${API_URL_DETAIL}/${id}?api_key=${process.env.REACT_APP_API_KEY}`
+        `${process.env.REACT_APP_API_URL_DETAIL}/${id}?api_key=${process.env.REACT_APP_API_KEY}`
       );
       setMovieDetail(data);
       window.scrollTo(0, 0);
