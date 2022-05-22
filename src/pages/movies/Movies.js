@@ -4,7 +4,7 @@ import Filters from '../../components/filters/Filters';
 import SingleMovie from '../../components/singleMovie/SingleMovie';
 import "./movies.scss"
 import Loading from "../../assets/loader-loading.gif"
-import { API_URL } from '../../config/config';
+// import { API_URL } from '../../config/config';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { img_300, unavailable } from "../../config/config";
+// import { img_300, unavailable } from "../../config/config";
 import "./singleMovie.scss"
 
 const SingleContent = ({ movie }) => {
@@ -10,7 +10,7 @@ const SingleContent = ({ movie }) => {
       <Link to={`movie/${id}`}>
         <img
           className="poster"
-          src={poster_path ? `${img_300}${poster_path}` : unavailable}
+          src={poster_path ? `${process.env.REACT_APP_IMG_300}${poster_path}` : process.env.REACT_APP_UNAVAILABLE}
           alt={title}
         />
         <h2 className="title">{title}</h2>
