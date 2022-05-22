@@ -59,7 +59,7 @@ const Movies = () => {
 
   return (
     <>
-      <Filters setSortOrder={setSortOrder} />
+      <Filters sortOrder={sortOrder} setSortOrder={setSortOrder} />
 
       <div className="movies" >
         {

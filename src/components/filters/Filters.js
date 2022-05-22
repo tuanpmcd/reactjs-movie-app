@@ -1,6 +1,6 @@
 import { Box, FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 
-const Filters = ({ setSortOrder }) => {
+const Filters = ({ sortOrder, setSortOrder }) => {
   const filters = [
     {
       name: "Release Date Desc",
@@ -34,7 +34,7 @@ const Filters = ({ setSortOrder }) => {
         <FormControl fullWidth>
           <InputLabel>Filter</InputLabel>
           <Select
-            value={"release_date.desc"}
+            value={sortOrder}
             label="Filter"
             onChange={(e) => setSortOrder(e.target.value)}
           >
