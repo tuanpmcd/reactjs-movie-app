@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react"
 import axios from "axios";
 import "./movieDetail.scss"
 import { Link, useParams } from "react-router-dom"
-// import { img_500, unavailable } from '../../config/config'
-// import { API_URL_DETAIL } from "../../config/config";
+import { img_500, unavailable } from '../../config/config'
+import { API_URL_DETAIL } from "../../config/config";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 const MovieDetail = () => {
@@ -13,7 +13,7 @@ const MovieDetail = () => {
   useEffect(() => {
     const fetchMovieDetail = async () => {
       const { data } = await axios.get(
-        `${process.env.REACT_APP_API_URL_DETAIL}/${id}?api_key=${process.env.REACT_APP_API_KEY}`
+        `${API_URL_DETAIL}/${id}?api_key=${process.env.REACT_APP_API_KEY}`
       );
       setMovieDetail(data);
       window.scrollTo(0, 0);
@@ -34,12 +34,12 @@ const MovieDetail = () => {
             <div
               className="banner"
               style={{
-                backgroundImage: `url('${process.env.REACT_APP_IMG_500}${movieDetail.backdrop_path || movieDetail.poster_path}')` || `url('${process.env.REACT_APP_UNAVAILABLE}')`
+                backgroundImage: `url('${img_500}${movieDetail.backdrop_path || movieDetail.poster_path}')` || `url('${unavailable}')`
               }}>
             </div>
             <div className="mb-3 movie-content container">
               <div className="movie-content_poster">
-                <div className="movie-content_poster_img" style={{ backgroundImage: `url('${process.env.REACT_APP_IMG_500}${movieDetail.poster_path || movieDetail.backdrop_path}')` }}></div>
+                <div className="movie-content_poster_img" style={{ backgroundImage: `url('${img_500}${movieDetail.poster_path || movieDetail.backdrop_path}')` }}></div>
               </div>
               <div className="movie-content_info">
                 <h2 className="title">

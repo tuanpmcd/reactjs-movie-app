@@ -4,7 +4,7 @@ import Filters from '../../components/filters/Filters';
 import SingleMovie from '../../components/singleMovie/SingleMovie';
 import "./movies.scss"
 import Loading from "../../assets/loader-loading.gif"
-// import { API_URL } from '../../config/config';
+import { API_URL } from '../../config/config';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -14,7 +14,7 @@ const Movies = () => {
 
   const fetchMovies = async (pageNumber) => {
     const { data } = await axios.get(
-      `${process.env.REACT_APP_API_URL}?api_key=${process.env.REACT_APP_API_KEY}&primary_release_date.lte=2020-12-31&sort_by=${sortOrder}&page=${pageNumber}`
+      `${API_URL}?api_key=${process.env.REACT_APP_API_KEY}&primary_release_date.lte=2020-12-31&sort_by=${sortOrder}&page=${pageNumber}`
     );
 
     if (pageNumber === 1) {
