@@ -17,7 +17,4 @@ export const API_URL =
 export const API_URL_DETAIL =
   "https://api.themoviedb.org/3/movie";
 
-export const API_KEY =
-  "328c283cd27bd1877d9080ccb1604c91";
-
 
