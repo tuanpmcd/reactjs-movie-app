@@ -1,0 +1,40 @@
+@use "./scss/" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: $body-bg;
+  color: $white;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  @include mobile {
+    padding-top: 70px;
+  }
+}

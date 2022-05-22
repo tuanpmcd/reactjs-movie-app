@@ -1,0 +1,46 @@
+@use "../../scss/" as *;
+
+.singleMovie {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 5px;
+  margin: 5px 0;
+  background-color: $secondary-bg;
+  border-radius: $border-radius;
+  position: relative;
+  transition: all 0.3s ease;
+
+  .poster {
+    border-radius: $border-radius;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    padding: 8px 0;
+  }
+
+  .subTitle {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3px;
+    padding: 0 2px;
+    padding-bottom: 3px;
+    font-weight: 400;
+  }
+
+  &:hover {
+    background-color: $white-bg;
+    a {
+      color: $black;
+    }
+  }
+
+  @media (max-width: 600px) {
+    & {
+      width: 46%;
+    }
+  }
+}

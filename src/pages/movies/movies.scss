@@ -1,0 +1,25 @@
+@use "../../scss/" as *;
+
+.movies {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  img {
+    margin-bottom: 10px;
+  }
+  button {
+    background-color: $secondary-bg;
+    padding: 5px 12px;
+    color: $white;
+    border-radius: $border-radius;
+  }
+}
