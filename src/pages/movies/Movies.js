@@ -9,7 +9,7 @@ import { API_URL } from '../../config/config';
 const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [pageNumber, setPageNumber] = useState(1)
-  const [sortOrder, setSortOrder] = useState("release_date.desc");
+  const [sortOrder, setSortOrder] = useState("release_date.asc");
   const [loading, setLoading] = useState(false)
 
   const fetchMovies = async (pageNumber) => {
