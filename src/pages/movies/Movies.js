@@ -69,11 +69,11 @@ const Movies = () => {
         }
       </div>
 
-      <div className="loading">
+      <div onClick={loadMore} ref={pageEnd} className="loading">
         <img width={30} height={30} src={Loading} alt="" />
-        <button onClick={loadMore} ref={pageEnd}>
+        {/* <button onClick={loadMore} ref={pageEnd}>
           Load More
-        </button>
+        </button> */}
       </div>
 
     </>
